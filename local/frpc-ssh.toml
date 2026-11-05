@@ -1,0 +1,54 @@
+# frp 客户端(frp-over-SSH 模式):连接本机 7000,由 ssh -L 转发到服务器 frps
+# 端口号必须与 Sunshine 的固定端口一一对应,客户端握手会按固定端口回连
+serverAddr = "127.0.0.1"
+serverPort = 7000
+auth.token = "<FRP_TOKEN>"
+
+[[proxies]]
+name = "sun-47984-https-api"
+type = "tcp"
+localIP = "127.0.0.1"
+localPort = 47984
+remotePort = 47984
+
+[[proxies]]
+name = "sun-47989-http-api"
+type = "tcp"
+localIP = "127.0.0.1"
+localPort = 47989
+remotePort = 47989
+
+[[proxies]]
+name = "sun-47990-webui"
+type = "tcp"
+localIP = "127.0.0.1"
+localPort = 47990
+remotePort = 47990
+
+[[proxies]]
+name = "sun-48010-rtsp"
+type = "tcp"
+localIP = "127.0.0.1"
+localPort = 48010
+remotePort = 48010
+
+[[proxies]]
+name = "sun-47998-video"
+type = "udp"
+localIP = "127.0.0.1"
+localPort = 47998
+remotePort = 47998
+
+[[proxies]]
+name = "sun-47999-audio"
+type = "udp"
+localIP = "127.0.0.1"
+localPort = 47999
+remotePort = 47999
+
+[[proxies]]
+name = "sun-48000-control"
+type = "udp"
+localIP = "127.0.0.1"
+localPort = 48000
+remotePort = 48000

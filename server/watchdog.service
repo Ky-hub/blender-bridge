@@ -1,0 +1,6 @@
+[Unit]
+Description=Moonlight orphaned session watchdog
+
+[Service]
+Type=oneshot
+ExecStart=/opt/moonlight-web/watchdog.sh

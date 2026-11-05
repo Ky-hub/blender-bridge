@@ -1,0 +1,12 @@
+[Unit]
+Description=frp server
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/opt/frp/frp_0.72.0_linux_amd64/frps -c /opt/frp/frps.toml
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

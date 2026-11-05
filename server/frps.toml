@@ -1,0 +1,6 @@
+# frp 服务端配置
+bindPort = 7000
+# 关键:Sunshine 端口只映射到服务器 loopback,公网不暴露
+proxyBindAddr = "127.0.0.1"
+# 生成方式: openssl rand -hex 16
+auth.token = "<FRP_TOKEN>"
